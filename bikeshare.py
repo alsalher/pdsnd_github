@@ -28,6 +28,8 @@ def get_filters():
     month = []
     while month not in months:
         month = input("Enter a month from January to June, or enter '''All''': ").lower()
+        if month not in months:
+            print('You have not entered a valid month')
 
     # get user input for day of week (all, monday, tuesday, ... sunday)
     days = ['all','monday', 'tuesday', 'wednesday', 'thursday', 'friday', 'saturday', 'sunday']
