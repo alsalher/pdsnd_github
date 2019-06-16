@@ -116,7 +116,7 @@ def station_stats(df):
     df['combination'] = 'From ' + df['Start Station'] + ' to ' + df['End Station']
     print('Most common combination: {}'.format(df['combination'].mode()[0]))
 
-    
+
 
     print("\nThis took %s seconds." % (time.time() - start_time))
     print('-'*40)
@@ -170,6 +170,7 @@ def main():
         city, month, day = get_filters()
         df = load_data(city, month, day)
 
+        """Displays all statistics on bikeshare."""
         time_stats(df)
         station_stats(df)
         trip_duration_stats(df)
