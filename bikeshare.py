@@ -21,7 +21,8 @@ def get_filters():
     city = []
     while city not in cities:
         city = input("Enter a city from Chicago, New York City or Washington: ").lower()
-
+        if city not in cities:
+            print('You have not entered a valid city')
     # get user input for month (all, january, february, ... , june)
     months = ['all','january', 'february', 'march', 'april', 'may', 'june']
     month = []
