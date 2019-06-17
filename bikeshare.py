@@ -170,7 +170,21 @@ def main():
         city, month, day = get_filters()
         df = load_data(city, month, day)
 
+<<<<<<< HEAD
         """Displays all statistics on bikeshare."""
+||||||| parent of 76c5cdc... Add to code lines for displaying raw data
+=======
+        """Displays raw data if user requires."""
+
+        raw_data = input('\nDo you want to take a look in the data? Enter yes or no.\n')
+
+        count = 5
+        while raw_data.lower() == 'yes':
+            print(df.head(count))
+            raw_data = input('\nDo you want to take 5 lines more? Enter yes or no.\n')
+            count = count + 5
+
+>>>>>>> 76c5cdc... Add to code lines for displaying raw data
         time_stats(df)
         station_stats(df)
         trip_duration_stats(df)
